@@ -128,6 +128,7 @@ function runManagerAlerts(triggerSource) {
  * TEST 5: Manager Acknowledgement handler (called by onEdit when Manager_Dashboard is edited).
  */
 function handleManagerDashboardEdit(e) {
+  if (!e || !e.range) return;
   const sheet = e.range.getSheet();
   const row = e.range.getRow();
   const col = e.range.getColumn();

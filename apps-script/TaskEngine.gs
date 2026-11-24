@@ -9,6 +9,7 @@
  * Entry point called by onEdit(e) when Employee_Workspace is edited.
  */
 function handleEmployeeWorkspaceEdit(e) {
+  if (!e || !e.range) return;
   const sheet = e.range.getSheet();
   const row = e.range.getRow();
   const col = e.range.getColumn();
