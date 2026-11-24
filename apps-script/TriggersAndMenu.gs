@@ -1,6 +1,6 @@
 /**
  * TriggersAndMenu.gs
- * Adds the custom "Allo Ops Automation" menu to Google Sheets,
+ * Adds the custom "Ops Automation" menu to Google Sheets,
  * routes live spreadsheet edits (Employee_Workspace & Manager_Dashboard),
  * and installs all required event + time-driven triggers idempotently.
  */
@@ -17,7 +17,7 @@ function onOpen() {
     .addItem('Test 6: Leadership Escalation', 'runTest6_LeadershipEscalation')
     .addItem('Test 8: Idempotency / No Duplicates', 'runTest8_IdempotencyCheck');
 
-  ui.createMenu('Allo Ops Automation')
+  ui.createMenu('Ops Automation')
     .addItem('Refresh All Views', 'refreshAllViews')
     .addSeparator()
     .addItem('Run Manager Alert Check Now', 'menuRunManagerAlerts')

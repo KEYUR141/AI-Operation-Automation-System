@@ -1,6 +1,6 @@
-# Allo Innoware — Recurring Task Tracking, Pending Reports & Escalation Automation
+# AI Operations — Recurring Task Tracking, Pending Reports & Escalation Automation
 
-A working **Google Sheets + Google Apps Script** operational automation system built for the **Allo Innoware — AI Operations / Founder's Office** assignment.
+A working **Google Sheets + Google Apps Script** operational automation system for recurring task tracking, single-point employee updates, same-day manager alerts, and SLA-based leadership escalation.
 
 It automates the full recurring operational task lifecycle:
 `Task Becomes Due` → `Employee Single-Point Action` → `Proof Validation & Cycle Rollover` → `Same-Day Manager Alert` → `Manager Acknowledgement` → `Leadership Escalation` — with strict idempotency (zero duplicate cycles, logs, or emails).
@@ -51,7 +51,7 @@ AI-Operation-Automation-System/
 │   ├── WorkspaceSync.gs        # Status recalculation + sync for Employee_Workspace & Manager_Dashboard
 │   ├── TaskEngine.gs           # Single-point completion, proof validation, idempotency, cycle rollover
 │   ├── EscalationEngine.gs     # Same-day Manager alerts, Manager acknowledgement, Leadership escalation
-│   ├── TriggersAndMenu.gs      # Custom "Allo Ops Automation" menu, installable onEdit, time-driven triggers
+│   ├── TriggersAndMenu.gs      # Custom "Ops Automation" menu, installable onEdit, time-driven triggers
 │   └── TestHarness.gs          # 1-click verification runners for Assignment Tests 1–8
 └── docs/
     ├── SYSTEM_DESIGN.md            # Process map, guardrails against incorrect changes & failure monitoring
@@ -66,9 +66,19 @@ AI-Operation-Automation-System/
 1. Open a new Google Sheet (`sheets.new`) → **Extensions → Apps Script**.
 2. Add the 7 `.gs` files from `apps-script/` into the Apps Script editor and save (`Ctrl + S`).
 3. Run **`initializeSystem`** from `Setup.gs` and approve permissions.
-4. Reload the Google Sheet tab → click **`Allo Ops Automation` → `Install Automatic Triggers (onEdit + Schedule)`**.
+4. Reload the Google Sheet tab → click **`Ops Automation` → `Install Automatic Triggers (onEdit + Schedule)`**.
 5. Update `Manager_Email` and `Leadership_Email` in the **`Config`** tab (optional; defaults to your Google account).
-6. Use **`Allo Ops Automation` → `Run Test Scenarios (Tests 1-8)`** or interact directly with `Employee_Workspace` and `Manager_Dashboard` to verify every test case.
+6. Use **`Ops Automation` → `Run Test Scenarios (Tests 1-8)`** or interact directly with `Employee_Workspace` and `Manager_Dashboard` to verify every test case.
+
+---
+
+## Live Screenshots
+
+### Same-Day Pending Task Alert Email (Manager Alert — Test 4)
+![Same-Day Pending Task Alert Email](assets/manager-alert-email.png)
+
+### Config Tab & Automated Triggers Setup (onEdit + Scheduled Cron)
+![Config and Triggers Installed](assets/config-and-triggers.png)
 
 ---
 

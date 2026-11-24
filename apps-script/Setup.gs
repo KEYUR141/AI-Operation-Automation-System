@@ -131,7 +131,7 @@ function setupEmployeeWorkspaceSheet_(ss) {
   const sheet = getOrResetSheet_(ss, SHEETS.WORKSPACE);
 
   sheet.getRange('A1:K1').merge()
-    .setValue('ALLO INNOWARE — EMPLOYEE PENDING TASKS (SINGLE-POINT UPDATE)')
+    .setValue('OPS AUTOMATION — EMPLOYEE PENDING TASKS (SINGLE-POINT UPDATE)')
     .setBackground('#0f4c81').setFontColor('#ffffff').setFontWeight('bold').setFontSize(12);
 
   sheet.getRange('A2').setValue('Filter Employee:').setFontWeight('bold');
@@ -170,7 +170,7 @@ function setupManagerDashboardSheet_(ss) {
   const sheet = getOrResetSheet_(ss, SHEETS.MANAGER);
 
   sheet.getRange('A1:L1').merge()
-    .setValue('ALLO INNOWARE — MANAGER MONITORING & ESCALATION DASHBOARD')
+    .setValue('OPS AUTOMATION — MANAGER MONITORING & ESCALATION DASHBOARD')
     .setBackground('#b71c1c').setFontColor('#ffffff').setFontWeight('bold').setFontSize(12);
 
   // KPI Labels (Row 2) and Live Formulas (Row 3)

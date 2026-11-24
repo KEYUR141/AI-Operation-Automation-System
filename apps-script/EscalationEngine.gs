@@ -83,7 +83,7 @@ function runManagerAlerts(triggerSource) {
 
     // Send 1 consolidated email to Manager
     const sheetUrl = ss.getUrl();
-    const subject = `[Allo Ops] Same-Day Pending Task Alert (${pendingItems.length} task${pendingItems.length > 1 ? 's' : ''}) — ${formatDate(today)}`;
+    const subject = `[Ops Automation] Same-Day Pending Task Alert (${pendingItems.length} task${pendingItems.length > 1 ? 's' : ''}) — ${formatDate(today)}`;
     const htmlBody = buildManagerAlertHtml_(pendingItems, sheetUrl, cfg);
     const plainBody = pendingItems.map(item =>
       `- ${item.taskId} | ${item.taskName} | ${item.assignedTo} | Cycle ${item.cycle} | Due: ${formatDate(item.dueDate)} (${item.daysOverdue}d overdue)`
@@ -392,7 +392,7 @@ function buildEscalationHtml_(items, sheetUrl) {
         </thead>
         <tbody>${rowsHtml}</tbody>
       </table>
-      <p style="margin-top:16px;"><a href="${sheetUrl}">Open Allo Ops Dashboard</a></p>
+      <p style="margin-top:16px;"><a href="${sheetUrl}">Open Ops Automation Dashboard</a></p>
       <p style="font-size:12px;color:#5f6368;">This escalation is sent once per cycle to prevent inbox spam.</p>
     </div>
   `;

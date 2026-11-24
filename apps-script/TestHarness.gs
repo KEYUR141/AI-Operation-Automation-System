@@ -1,7 +1,7 @@
 /**
  * TestHarness.gs
  * One-click verification routines for Assignment Tests 1 through 8.
- * Can be run from the "Allo Ops Automation -> Run Test Scenarios (Tests 1-8)" menu.
+ * Can be run from the "Ops Automation -> Run Test Scenarios (Tests 1-8)" menu.
  */
 
 function resetDemoData() {
